@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pinyin Input Practice</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2P8z8DwHwAFwQJxw0aP2wAAAABJRU5ErkJggg==">
+</head>
+<body>
+  <main class="container">
+    <h1 class="title">Pinyin Input Practice</h1>
+
+    <section class="input-section">
+      <label for="ime-input" class="label">Type pinyin below, then choose from candidates:</label>
+      <textarea id="ime-input" class="ime-input" rows="3" spellcheck="false" placeholder="Type pinyin (e.g., ni, wo, zhong)..."></textarea>
+      <div class="controls"></div>
+      <div id="composing" class="composing" aria-live="polite"></div>
+      <div id="candidates" class="candidates" role="listbox" aria-label="Candidates"></div>
+    </section>
+
+    <section class="output-section">
+      <div class="output-header">
+        <span class="label">Committed text:</span>
+      </div>
+      <div id="committed-output" class="committed-output" aria-live="polite" aria-label="Committed content" tabindex="0"></div>
+      <div id="toast" class="toast" role="status" aria-live="assertive" hidden></div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html> 
